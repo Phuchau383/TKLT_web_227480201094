@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hau {
+    display: flex;
+}
+.hauhau {
+    width: 250px;
+    background-color: black;
+    padding: 20px;
+}
+
+.hauhau ul {
+    list-style: none;
+}
+
+.hauhau ul li {
+    margin: 10px 0;
+}
+
+.hauhau ul li a {
+    color: white;
+    text-decoration: underline; 
+    font-size: 18px;
+    display: block;
+    color: white;
+   
+}
+
+
+
+
+.tieude {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid black;
+}

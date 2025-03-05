@@ -1,0 +1,19 @@
+body{
+    background-color: yellow;
+    border: 3px solid red;
+}
+h1{
+    color:red;
+    text-align: center;
+    
+}
+.chu{
+    font-family: Verdana;
+    color:black
+}
+.mau{
+    font-size: 20px;
+}
+.sac{
+font-size: 20px;
+}
