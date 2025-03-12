@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị nội dung</title>
+</head>
+<body>
+    <button id="chaoButton" value="Chào">Chào</button>
+    <input type="text" id="msg04" value="Chào">
+    <div id="result"></div>
+
+    <script>
+        function hienthi() {
+            var message = document.getElementById('msg04').value;
+            document.getElementById('result').innerHTML = message;
+        }
+        var button = document.getElementById('chaoButton');
+        button.onclick = function() {
+            hienthi();
+        };
+    </script>
+
+</body>
+</html>

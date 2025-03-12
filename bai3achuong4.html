@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo Welcome</title>
+</head>
+<body>
+    <button id="welcomeButton" value="Welcome">Welcome</button>
+    <input type="text" id="msg03" value="Welcome to ">
+
+    <script>
+        var button = document.getElementById('welcomeButton');
+        var textbox = document.getElementById('msg03');
+        button.onclick = function() {
+            var message = textbox.value + "students";
+            alert(message);
+        };
+    </script>
+
+</body>
+</html>

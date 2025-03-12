@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo Hello</title>
+</head>
+<body>
+    <button id="helloButton" value="Hello">Hello</button>
+    <input type="text" id="msg03" value="Hello everybody ">
+
+    <script>
+        var button = document.getElementById('helloButton');
+        var textbox = document.getElementById('msg03');
+        button.onclick = function() {
+            var message = textbox.value + "I am studying web design with JavaScript";
+            document.body.innerHTML += "<p>" + message + "</p>";
+        };
+    </script>
+
+</body>
+</html>

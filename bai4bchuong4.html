@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị thông tin</title>
+</head>
+<body>
+    <button id="btnHoten" value="Họ tên">Họ tên</button>
+    <button id="btnDonvi" value="Đơn vị">Đơn vị</button>
+    <input type="text" id="txthoten" value="Chào">
+    <input type="text" id="txtdonvi" value="Đơn vị">
+    <div id="result"></div>
+
+    <script>
+        function cthoten() {
+            var hoten = document.getElementById('txthoten').value; 
+            document.getElementById('result').innerHTML = "Họ tên: " + hoten; 
+        }
+        function ctdonvi() {
+            var donvi = document.getElementById('txtdonvi').value; 
+            document.getElementById('result').innerHTML = "Đơn vị: " + donvi; 
+        }
+
+        var btnHoten = document.getElementById('btnHoten');
+        var btnDonvi = document.getElementById('btnDonvi');
+        btnHoten.onclick = function() {
+            cthoten(); 
+        };
+        btnDonvi.onclick = function() {
+            ctdonvi(); 
+        };
+    </script>
+
+</body>
+</html>

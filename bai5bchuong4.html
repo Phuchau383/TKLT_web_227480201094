@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị Ngày Tháng Năm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #2C3E50;
+        }
+        p {
+            font-size: 18px;
+            color: #34495E;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Thông tin ngày tháng năm hệ thống</h2>
+
+    <p id="date"></p>
+    <p id="day"></p>
+    <p id="fullYear"></p>
+    <p id="year"></p>
+    <p id="hours"></p>
+    <p id="milliseconds"></p>
+    <p id="minutes"></p>
+    <p id="month"></p>
+    <p id="seconds"></p>
+    <p id="timeInMilliseconds"></p>
+
+    <script>
+        var currentDate = new Date();
+        var dayOfMonth = currentDate.getDate();
+        var dayOfWeek = currentDate.getDay();
+        var fullYear = currentDate.getFullYear();
+        var shortYear = currentDate.getYear();
+        var hours = currentDate.getHours();
+        var milliseconds = currentDate.getMilliseconds();
+        var minutes = currentDate.getMinutes();
+        var month = currentDate.getMonth();
+        var seconds = currentDate.getSeconds();
+        var timeInMilliseconds = currentDate.getTime();
+        document.getElementById("date").innerHTML = "Ngày trong tháng: " + dayOfMonth;
+        document.getElementById("day").innerHTML = "Ngày trong tuần (0 là Chủ Nhật): " + dayOfWeek;
+        document.getElementById("fullYear").innerHTML = "Năm đầy đủ (yyyy): " + fullYear;
+        document.getElementById("year").innerHTML = "Năm 2 chữ số (yy): " + shortYear;
+        document.getElementById("hours").innerHTML = "Số giờ (0 - 23): " + hours;
+        document.getElementById("milliseconds").innerHTML = "Mili giây (0 - 999): " + milliseconds;
+        document.getElementById("minutes").innerHTML = "Số phút (0 - 59): " + minutes;
+        document.getElementById("month").innerHTML = "Tháng (0 - 11): " + month;
+        document.getElementById("seconds").innerHTML = "Số giây (0 - 59): " + seconds;
+        document.getElementById("timeInMilliseconds").innerHTML = "Thời gian (miliseconds từ 01/01/1970): " + timeInMilliseconds;
+    </script>
+
+</body>
+</html>

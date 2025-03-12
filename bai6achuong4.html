@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tuổi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: blue;
+        }
+        p {
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tính tuổi của bạn</h2>
+    <label for="birthYear">Nhập năm sinh của bạn: </label>
+    <input type="number" id="birthYear" placeholder="">
+    <button onclick="tinhTuoi()">Tính tuổi</button>
+    <p id="result"></p>
+
+    <script>
+        function tinhTuoi() {
+            var birthYear = document.getElementById('birthYear').value;
+            if (birthYear == "" || birthYear < 1900 || birthYear > new Date().getFullYear()) {
+                document.getElementById('result').innerHTML = "Vui lòng nhập năm sinh hợp lệ.";
+                return;
+            }
+            var currentYear = new Date().getFullYear();
+            var age = currentYear - birthYear;
+            document.getElementById('result').innerHTML = "Tuổi của bạn là: " + age + " tuổi.";
+        }
+    </script>
+
+</body>
+</html>
