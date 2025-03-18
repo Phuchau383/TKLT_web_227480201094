@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Thiết bị Văn phòng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color:violet
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Nhập danh sách thiết bị văn phòng</h2>
+    <input type="text" id="deviceInput" placeholder="Nhập tên thiết bị">
+    <button onclick="addDevice()">Thêm thiết bị</button>
+    <button onclick="showComputers()">Hiển thị Computers</button>
+
+    <h3>Danh sách thiết bị (chỉ hiển thị 'Computer')</h3>
+    <table id="deviceTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Tên thiết bị</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <script>
+        let devices = []; 
+        function addDevice() {
+            let deviceName = document.getElementById("deviceInput").value.trim();
+            if (deviceName !== "") {
+                devices.push(deviceName);
+                document.getElementById("deviceInput").value = ""; 
+            } else {
+                alert("Vui lòng nhập tên thiết bị!");
+            }
+        }
+        function showComputers() {
+            let tableBody = document.querySelector("#deviceTable tbody");
+            tableBody.innerHTML = ""; 
+            let filteredDevices = devices.filter(device => device.toLowerCase() === "computer");
+
+            if (filteredDevices.length === 0) {
+                tableBody.innerHTML = "<tr><td colspan='2'>Không có thiết bị nào tên 'Computer'</td></tr>";
+                return;
+            }
+
+            filteredDevices.forEach((device, index) => {
+                let row = `<tr>
+                    <td>${index + 1}</td>
+                    <td>${device}</td>
+                </tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+    </script>
+
+</body>
+</html>

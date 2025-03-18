@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay Đổi Màu Nền</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            color: white;
+        }
+        .blue { background-color: blue; }
+        .green { background-color: green; }
+        .yellow { background-color: gold; color: black; }
+    </style>
+</head>
+<body>
+
+    <h2>Nhấn nút để thay đổi màu nền</h2>
+    
+    <button class="blue" onclick="changeColor('blue')">Màu xanh dương</button>
+    <button class="green" onclick="changeColor('green')">Màu xanh lá</button>
+    <button class="yellow" onclick="changeColor('yellow')">Màu vàng</button>
+
+    <script>
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+</html>

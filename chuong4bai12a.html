@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đọc giá trị trong hộp text</title>
+</head>
+<body>
+
+    <h2>Hãy gõ văn bản vào trong hộp text và click vào nút Hiển thị</h2>
+
+    <input type="text" id="HoTen" placeholder="Nhập họ tên của bạn">
+    <input type="button" name="HienThi" value="Hiển thị" onclick="hienThiHoTen()">
+
+    <script>
+        function hienThiHoTen() {
+            let hoTen = document.getElementById("HoTen").value;
+            alert("Bạn đã nhập: " + hoTen);
+        }
+    </script>
+
+</body>
+</html>

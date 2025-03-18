@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị thông tin</title>
+</head>
+<body>
+
+    <h2>Nhập thông tin và nhấn nút Hiển thị</h2>
+
+    <label for="HoTen">Họ tên:</label>
+    <input type="text" id="HoTen" placeholder="Nhập họ tên của bạn"><br><br>
+
+    <label for="NamSinh">Năm sinh:</label>
+    <input type="text" id="NamSinh" placeholder="Nhập năm sinh"><br><br>
+
+    <input type="button" value="Hiển thị" onclick="hienThiThongTin()">
+
+    <h3>Kết quả:</h3>
+    <p id="ketQua"></p>
+
+    <script>
+        function hienThiThongTin() {
+            let hoTen = document.getElementById("HoTen").value;
+            let namSinh = document.getElementById("NamSinh").value;
+            document.getElementById("ketQua").innerHTML = "Họ tên: " + hoTen + "<br>Năm sinh: " + namSinh;
+        }
+    </script>
+
+</body>
+</html>
