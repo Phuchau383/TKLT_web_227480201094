@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy Tính Cơ Bản</title>
+</head>
+<body>
+
+    <h2>Nhập hai số và chọn phép tính</h2>
+
+    <label for="SoHang1">Số hạng 1:</label>
+    <input type="text" id="SoHang1" placeholder="Nhập số thứ nhất"><br><br>
+
+    <label for="SoHang2">Số hạng 2:</label>
+    <input type="text" id="SoHang2" placeholder="Nhập số thứ hai"><br><br>
+
+    <input type="button" value="Cộng" onclick="tinhToan('+')">
+    <input type="button" value="Trừ" onclick="tinhToan('-')">
+    <input type="button" value="Nhân" onclick="tinhToan('*')">
+    <input type="button" value="Chia" onclick="tinhToan('/')"><br><br>
+
+    <label for="KetQua">Kết quả:</label>
+    <input type="text" id="KetQua" placeholder="Kết quả sẽ hiển thị ở đây" readonly>
+
+    <script>
+        function tinhToan(phepToan) {
+            let so1 = parseFloat(document.getElementById("SoHang1").value);
+            let so2 = parseFloat(document.getElementById("SoHang2").value);
+
+            // Kiểm tra nếu nhập đúng số
+            if (isNaN(so1) || isNaN(so2)) {
+                alert("Vui lòng nhập số hợp lệ!");
+                return;
+            }
+
+            let ketQua;
+            switch (phepToan) {
+                case '+':
+                    ketQua = so1 + so2;
+                    break;
+                case '-':
+                    ketQua = so1 - so2;
+                    break;
+                case '*':
+                    ketQua = so1 * so2;
+                    break;
+                case '/':
+                    if (so2 === 0) {
+                        alert("Không thể chia cho 0!");
+                        return;
+                    }
+                    ketQua = so1 / so2;
+                    break;
+            }
+
+            document.getElementById("KetQua").value = ketQua;
+        }
+    </script>
+
+</body>
+</html>

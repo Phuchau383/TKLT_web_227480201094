@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Tổng Hai Số</title>
+</head>
+<body>
+
+    <h2>Nhập hai số và nhấn nút Tính Tổng</h2>
+
+    <label for="SoHang1">Số hạng 1:</label>
+    <input type="text" id="SoHang1" placeholder="Nhập số thứ nhất"><br><br>
+
+    <label for="SoHang2">Số hạng 2:</label>
+    <input type="text" id="SoHang2" placeholder="Nhập số thứ hai"><br><br>
+
+    <input type="button" value="Tính Tổng" onclick="tinhTong()"><br><br>
+
+    <label for="KetQua">Kết quả:</label>
+    <input type="text" id="KetQua" placeholder="Tổng sẽ hiển thị ở đây" readonly>
+
+    <script>
+        function tinhTong() {
+            let so1 = parseFloat(document.getElementById("SoHang1").value);
+            let so2 = parseFloat(document.getElementById("SoHang2").value);
+            
+            // Kiểm tra nếu nhập đúng số
+            if (isNaN(so1) || isNaN(so2)) {
+                alert("Vui lòng nhập số hợp lệ!");
+                return;
+            }
+
+            let tong = so1 + so2;
+            document.getElementById("KetQua").value = tong;
+        }
+    </script>
+
+</body>
+</html>
